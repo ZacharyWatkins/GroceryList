@@ -4,7 +4,7 @@ function addItem() {
   var item;
   var itemName;
   input = document.getElementById("newItem").value;
-  list = document.getElementById("listDisplay").innerHTML;
+  list = document.getElementById("listDisplay");
   itemName = document.createTextNode(input);
   item = document.createElement("li");
   item.appendChild(itemName);
