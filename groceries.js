@@ -1,15 +1,15 @@
 function addItem() {
-var input;
-var list;
-var item;
-var itemName;
-itemName = document.createTextNode(input);
-item = document.createElement("li");
-input = document.getElementById("newItem").value;
-document.getElementById("listDisplay").innerHTML=list;
-item.appendChild(itemName);
-list.appendChild(item);
-document.getElementById("newItem").value="";
+  var input;
+  var list;
+  var item;
+  var itemName;
+  input = document.getElementById("newItem").value;
+  list = document.getElementById("listDisplay").innerHTML;
+  itemName = document.createTextNode(input);
+  item = document.createElement("li");
+  item.appendChild(itemName);
+  list.appendChild(item);
+  document.getElementById("newItem").value="";
 }
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
