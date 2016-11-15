@@ -3,13 +3,31 @@ function addItem() {
   var list;
   var item;
   var itemName;
+  var iconClose;
+  var btnClose;
   input = document.getElementById("newItem").value;
   list = document.getElementById("listDisplay");
   itemName = document.createTextNode(input);
   item = document.createElement("li");
+  btnClose = document.createElement("button");
+  btnClose.classList.add("btn");
+  btnClose.classList.add("btn-danger");
+  btnClose.classList.add("btn-xs");
+  btnClose.addEventListener("click");
+  btnClose.removeParentListItem;
+  iconClose = createElement("span");
+  iconClose.classList.add("glyphicon");
+  iconClose.classList.add("glyphicon-remove");
+  btnClose.appendChild(iconClose);
   item.appendChild(itemName);
   list.appendChild(item);
+  btnClose.appendChild(li);
   document.getElementById("newItem").value="";
+}
+removeParentListItem() {
+  var mom = this.parentNode;
+  var grandma = mom.parentNode;
+  grandma.removeChild(mom);
 }
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
