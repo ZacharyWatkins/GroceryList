@@ -1,3 +1,4 @@
+var myList = [];
 function addItem() {
   var input;
   var list;
@@ -10,21 +11,23 @@ function addItem() {
   itemName = document.createTextNode(input);
   item = document.createElement("li");
   btnClose = document.createElement("button");
-  btnClose.classList.add("btn");
-  btnClose.classList.add("btn-danger");
-  btnClose.classList.add("btn-xs");
-  btnClose.addEventListener("click");
-  btnClose.removeParentListItem;
-  iconClose = createElement("span");
-  iconClose.classList.add("glyphicon");
-  iconClose.classList.add("glyphicon-remove");
+  btnClose.classList.add("btn","btn-danger","btn-xs");
+  btnClose.addEventListener("click",removeParentListItem);
+  iconClose = document.createElement("span");
+  iconClose.classList.add("glyphicon","glyphicon-remove");
   btnClose.appendChild(iconClose);
   item.appendChild(itemName);
   list.appendChild(item);
-  btnClose.appendChild(li);
+  item.appendChild(btnClose);
   document.getElementById("newItem").value="";
+    if (myList.indexOf(input) = -1) {
+      myList.push(input);
+      console.log(myList);
+    }
+    else {
+    }
 }
-removeParentListItem() {
+function removeParentListItem() {
   var mom = this.parentNode;
   var grandma = mom.parentNode;
   grandma.removeChild(mom);
