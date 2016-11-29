@@ -20,18 +20,16 @@ function addItem() {
   list.appendChild(item);
   item.appendChild(btnClose);
   document.getElementById("newItem").value="";
-    if (myList.indexOf(input) = -1) {
+    if (myList.indexOf(input) == -1) {
       myList.push(input);
       console.log(myList);
-    }
-    else {
     }
 }
 function removeParentListItem() {
   var mom = this.parentNode;
   var grandma = mom.parentNode;
   var itemRemove = mom.firstChild.textContent;
-  var itemIndex = myList.findIndex(itemRemove);
+  var itemIndex = myList.indexOf(itemRemove);
   myList.splice(itemIndex,1);
   grandma.removeChild(mom);
   console.log(myList);
