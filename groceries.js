@@ -25,6 +25,14 @@ function addItem() {
       console.log(myList);
     }
 }
+function saveList() {
+  var savedList = myList.toString();
+  setCookie("Slist",savedList,2);
+}
+function clearList() {
+document.getElementById("listDisplay").innerHTML = "";
+myList=[];
+}
 function removeParentListItem() {
   var mom = this.parentNode;
   var grandma = mom.parentNode;
