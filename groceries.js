@@ -1,12 +1,19 @@
 var myList = [];
+var input;
+var list;
+var item;
+var itemName;
+var iconClose;
+var btnClose;
+window.onload = loadCookieList();
 function addItem() {
-  var input;
-  var list;
-  var item;
-  var itemName;
-  var iconClose;
-  var btnClose;
   input = document.getElementById("newItem").value;
+  displayItem(input);
+}
+function displayItem(input) {
+  if (myList.indexOf(input) == -1) {
+    myList.push(input);
+    console.log(myList);
   list = document.getElementById("listDisplay");
   itemName = document.createTextNode(input);
   item = document.createElement("li");
@@ -20,10 +27,12 @@ function addItem() {
   list.appendChild(item);
   item.appendChild(btnClose);
   document.getElementById("newItem").value="";
-    if (myList.indexOf(input) == -1) {
-      myList.push(input);
-      console.log(myList);
-    }
+  }
+}
+function loadCookieList() {
+  var cookielist;
+  cookielist = getCookie("Slist");
+  console.log(cookielist);
 }
 function saveList() {
   var savedList = myList.toString();
