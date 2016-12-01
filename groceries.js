@@ -37,7 +37,7 @@ function loadCookieList() {
    for(i = 0; i < arrayCookie.length; i++) {
      displayItem(input);
    }
-  console.log(cookielist);
+  console.log(arrayCookie);
 }
 function saveList() {
   var savedList = myList.toString();
