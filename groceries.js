@@ -32,12 +32,10 @@ function displayItem(input) {
 function loadCookieList() {
   var cookielist;
   var arrayCookie;
-  var i = 0;
   cookielist = getCookie("Slist");
   arrayCookie = cookielist.split(" ")
-   while(i < arrayCookie.length) {
+   for(i = 0; i < arrayCookie.length; i++) {
      displayItem(input);
-     i++;
    }
   console.log(cookielist);
 }
